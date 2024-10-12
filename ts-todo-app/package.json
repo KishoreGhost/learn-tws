@@ -11,5 +11,8 @@
   "devDependencies": {
     "typescript": "^5.6.3"
   },
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "ts-todo-app": "file:"
+  }
 }
