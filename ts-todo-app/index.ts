@@ -1,3 +1,5 @@
+
+
 import readline from 'readline';
 
 interface Todo {
@@ -62,17 +64,17 @@ function mainMenu() {
 4. List Todos
 5. Exit
 > `,
-        (choice) => {
+        (choice: string) => {
             switch (choice.trim()) {
                 case '1':
-                    rl.question("Enter the title for the new todo: ", (title) => {
+                    rl.question("Enter the title for the new todo: ", (title: string) => {
                         addTodo(title);
                         mainMenu();
                     });
                     break;
                 case '2':
-                    rl.question("Enter the ID of the todo to update: ", (id) => {
-                        rl.question("Mark as completed? (yes/no): ", (answer) => {
+                    rl.question("Enter the ID of the todo to update: ", (id: number) => {
+                        rl.question("Mark as completed? (yes/no): ", (answer: string) => {
                             const completed = answer.trim().toLowerCase() === 'yes';
                             updateTodo(Number(id), completed);
                             mainMenu();
@@ -80,7 +82,7 @@ function mainMenu() {
                     });
                     break;
                 case '3':
-                    rl.question("Enter the ID of the todo to delete: ", (id) => {
+                    rl.question("Enter the ID of the todo to delete: ", (id: number) => {
                         deleteTodo(Number(id));
                         mainMenu();
                     });
