@@ -1,0 +1,1 @@
+### This is my learning typescript project where i will be learning ts to by making some small projects.
